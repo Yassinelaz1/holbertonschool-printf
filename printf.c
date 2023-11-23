@@ -6,8 +6,8 @@
 int _printf(const char *format, ...)
 {
 	va_list list_of_args;
-	int i = 0;
-	int byte = 0;
+	unsigned int i = 0;
+	unsigned int byte = 0;
 
 	if (format == NULL)
 	{
@@ -16,20 +16,32 @@ int _printf(const char *format, ...)
 	va_start(list_of_args, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] != '%')
-		{
-			byte++;
-			_putchar(format[i]);
-		}
-
-		else
+		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			if (((*get_function(format[i + 1]))(list_of_args)) != 0)
+			else if (format[i + 1] == '%')
 			{
-				byte += ((*get_function(format[i + 1]))(list_of_args));
+				_putchar('%');
+				byte++;
+				i++;
 			}
+
+			else if (get_function(format[i + 1]) != NULL)
+			{
+				byte += ((get_function(format[i + 1]))(list_of_args));
+				i++;
+			}
+			else
+			{
+				_putchar(format[i]);
+				byte++;
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			byte++;
 		}
 	}
 
