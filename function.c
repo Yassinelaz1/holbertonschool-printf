@@ -32,7 +32,7 @@ int p_char(va_list args)
 	char c = va_arg(args, int);
 
 	_putchar(c);
-	return (1);
+	return (0);
 }
 /**
  * p_percent-percent
@@ -43,5 +43,5 @@ int p_percent(va_list args)
 	char c = va_arg(args, int);
 
 	_putchar(c);
-	return(1);
+	return(0);
 }
