@@ -8,8 +8,8 @@
 
 typedef struct func
 {
-	char *func;
-	void (*function)(va_list);
+	char func;
+	int (*function)(va_list);
 } get_func;
 
 int _putchar(char c);
