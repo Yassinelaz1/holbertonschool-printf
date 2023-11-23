@@ -2,14 +2,13 @@
 /**
  * get_funcction - check the code
  * @s: char
- * Return: null
+ * Return: 0	
  */
 int (*get_function(char s))(va_list)
 {
 	get_func funcs[] = {
 		{'c', p_char},
 		{'s', p_string},
-		{'%', p_percent},
 		{'\0', NULL}};
 
 	int i = 0;
@@ -21,5 +20,5 @@ int (*get_function(char s))(va_list)
 		i++;
 	}
 
-	return (NULL);
+	return (0);
 }
