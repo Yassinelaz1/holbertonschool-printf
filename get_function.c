@@ -6,7 +6,7 @@
  */
 int (*get_function(char s))(va_list)
 {
-	get_func func[] = {
+	get_func funcs[] = {
 		{'c', p_char},
 		{'s', p_string},
 		{'%', p_percent},
@@ -14,10 +14,10 @@ int (*get_function(char s))(va_list)
 
 	int i = 0;
 
-	while (func[i].func != NULL)
+	while (funcs[i].func != '\0')
 	{
-		if (s == func[i].func[0])
-			return (func[i].func);
+		if (s == funcs[i].func)
+			return (funcs[i].function);
 		i++;
 	}
 
