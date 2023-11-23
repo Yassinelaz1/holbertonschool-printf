@@ -8,17 +8,18 @@ int p_string(va_list args)
 	int i;
 	char *string = va_arg(args, char *);
 
-	if (args == NULL)
+	if (string == NULL)
 	{
 		return (-1);
 	}
 	else
 	{
-		for (i = 0; i != '\0'; i++)
+		for (i = 0; string[i] != '\0'; i++)
 		{
 			_putchar(string[i]);
 		}
-		return (0);
+
+		return (i);
 	}
 }
 /**
