@@ -10,7 +10,8 @@ int p_string(va_list args)
 
 	if (string == NULL)
 	{
-		return (-1);
+		write(1, "(null)", 6);
+		return (6);
 	}
 	else
 	{
