@@ -14,9 +14,8 @@ typedef struct func
 int _putchar(char c);
 int (*get_function(char s))(va_list);
 int p_char(va_list args);
-int p_percent();
+int p_percent(va_list);
 int p_string(va_list args);
-
 int _printf(const char *format, ...);
 
 #endif
