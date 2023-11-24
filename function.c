@@ -39,23 +39,32 @@ int p_char(va_list args)
 /**
  * p_integer - prints integer
  * @args: argument to print
- * Return: number of characters
+ * Return: length
  */
 int p_integer(va_list args)
 {
-	int n = va_arg(args, int);
-	int p = 0;
-	int divisor = 1;
+	int d = 1,
+	length = 0,
+	num = va_arg(args, int);
+	unsigned int temp;
 
-	if (n < 0)
+	temp = num;
+	if (num < 0)
 	{
-		p += _putchar('-');
-		n = -n;
+		_putchar('-');
+		temp = -num;
+		length++;
 	}
-	while (n >= divisor)
+	while (temp / d > 9)
 	{
-		p += _putchar(n / divisor % 10 + '0');
-		divisor *= 10;
+		d *= 10;
 	}
-	return (p);
+	while (d != 0)
+	{
+		_putchar(temp / d + '0');
+		temp %= d;
+		length++;
+		d /= 10;
+	}
+	return (length);
 }
