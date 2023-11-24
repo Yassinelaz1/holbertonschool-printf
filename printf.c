@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- *
- *
+ *_printf-function that do printf
+ *@format:arguments
+ *Return:number of byte
  */
 int _printf(const char *format, ...)
 {
@@ -24,19 +25,15 @@ int _printf(const char *format, ...)
 			{
 				_putchar('%');
 				byte++;
-				i++;
-			}
-
+				i++; }
 			else if (get_function(format[i + 1]) != NULL)
 			{
 				byte += ((get_function(format[i + 1]))(list_of_args));
-				i++;
-			}
+				i++; }
 			else
 			{
 				_putchar(format[i]);
-				byte++;
-			}
+				byte++; }
 		}
 		else
 		{
@@ -44,7 +41,6 @@ int _printf(const char *format, ...)
 			byte++;
 		}
 	}
-
 	return (byte);
 	va_end(list_of_args);
 }
