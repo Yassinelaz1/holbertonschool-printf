@@ -4,11 +4,15 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
-typedef struct func
+/*
+ * struct func-structure for printf
+ * @func: pointer to characteres
+ * @function: function pointer that print fucntions
+ */
+typedef  func
 {
 	char func;
-	int (*function)(va_list);
+	int (*func)(va_list);
 } get_func;
 
 int _putchar(char c);
