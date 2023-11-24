@@ -9,10 +9,10 @@
  * @func: pointer to characteres
  * @function: function pointer that print fucntions
  */
-typedef  func
+typedef struct func
 {
 	char func;
-	int (*func)(va_list);
+	int (*function)(va_list);
 } get_func;
 
 int _putchar(char c);
