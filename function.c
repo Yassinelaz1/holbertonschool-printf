@@ -36,3 +36,26 @@ int p_char(va_list args)
 	_putchar(c);
 	return (1);
 }
+/**
+ * p_integer - prints integer
+ * @args: argument to print
+ * Return: number of characters
+ */
+int p_integer(va_list args)
+{
+	int n = va_arg(args, int);
+	int p = 0;
+	int divisor = 1;
+
+	if (n < 0)
+	{
+		p += _putchar('-');
+		n = -n;
+	}
+	while (n >= divisor)
+	{
+		p += _putchar(n / divisor % 10 + '0');
+		divisor *= 10;
+	}
+	return (p);
+}

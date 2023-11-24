@@ -9,6 +9,8 @@ int (*get_function(char s))(va_list)
 	get_func funcs[] = {
 		{'c', p_char},
 		{'s', p_string},
+		{'d', p_integer},
+		{'i', p_integer},
 		{'\0', NULL}};
 
 	int i = 0;
