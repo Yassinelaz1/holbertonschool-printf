@@ -17,7 +17,8 @@ int (*get_function(char s))(va_list)
 	{
 		if (s == funcs[i].func)
 			return (funcs[i].function);
+		i++;
 	}
-	i++;
+
 	return (0);
 }
