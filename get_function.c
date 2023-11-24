@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * get_funcction - check the code
+ * get_function-check the code
  * @s: char
- * Return: 0	
+ * Return: 0
  */
 int (*get_function(char s))(va_list)
 {
@@ -17,8 +17,7 @@ int (*get_function(char s))(va_list)
 	{
 		if (s == funcs[i].func)
 			return (funcs[i].function);
-		i++;
 	}
-
+	i++;
 	return (0);
 }
