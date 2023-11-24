@@ -1,47 +1,23 @@
 #include "main.h"
 /**
- * p_string-
- * @args:argument
+ * get_function-check the code
+ * @s: char
+ * Return: 0
  */
-int p_string(va_list args)
+int (*get_function(char s))(va_list)
 {
-	int byte = 0;
+	get_func funcs[] = {
+		{'c', p_char},
+		{'s', p_string},
+		{'\0', NULL}};
+
 	int i = 0;
-	char *string = va_arg(args,char *);
 
-	if (args == NULL)
+	while (funcs[i].func != '\0')
 	{
-		return (-1);
+		if (s == funcs[i].func)
+			return (funcs[i].function);
 	}
-	else
-	{
-		for (i = 0; i != '\0'; i++)
-		{
-			_putchar(string[i]);
-			byte++;
-		}
-		return (byte);
-	}
-}
-/**
- * p_char-print char
- * @args:argument
-*/
-int p_char(va_list args)
-{
-	char c = va_arg(args, int);
-
-	_putchar(c);
-	return (1);
-}
-/**
- * p_percent-percent
- * @args:argument
-*/
-int p_percent(va_list args)
-{
-	char c = va_arg(args, int);
-
-	_putchar(c);
-	return(1);
+	i++;
+	return (0);
 }
