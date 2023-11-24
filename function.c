@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * p_string-
+ * p_string- print string
  * @args:argument
+ * Return: string
  */
 int p_string(va_list args)
 {
@@ -26,6 +27,7 @@ int p_string(va_list args)
 /**
  * p_char-print char
  * @args:argument
+ * Return:char
  */
 int p_char(va_list args)
 {
