@@ -44,7 +44,7 @@ int p_char(va_list args)
 int p_integer(va_list args)
 {
 	int d = 1,
-	length = 0,
+	length = 0, 
 	num = va_arg(args, int);
 	unsigned int temp;
 
