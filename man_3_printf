@@ -1,0 +1,62 @@
+.TH _PRINTF 3 "november 2023" "_printf manual"
+
+.SH NAME
+\_printf \- printf function
+
+.SH SYNOPSIS
+.B #include "main.h"
+.br
+.I int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The \_printf function is a custom version of printf that prints formatted output on the screen
+
+.PP
+Supported Format Specifiers:
+
+.PP
+\&.TP
+.B %c :
+Character
+
+.PP
+\&.TP
+.B %s :
+String
+
+.PP
+\&.TP
+.B %% :
+Percent sign
+
+.PP
+\&.TP
+.B %i %d :
+Integer
+
+.SH RETURN VALUE
+Returns the number of characters printed
+If there is an error return -1
+
+.SH EXAMPLES
+Print a message:
+.PP
+.nf
+.B _printf("HOLBERTON SCHOOL!\n");
+.fi
+
+.PP
+Print an integer:
+.PP
+.nf
+.B _printf("Value of a: %d\n", a);
+.fi
+
+.SH SEE ALSO
+(Include only if relevant functions are used)
+
+.SH AUTHOR
+the _printf function was created by Eya Kadri and Yassine Lazhari
+
+.SH BUGS
+no bugs
