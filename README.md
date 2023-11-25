@@ -1,3 +1,4 @@
+![Printf (1)](https://github.com/Yassinelaz1/holbertonschool-printf/assets/146707414/3c769a0f-38bc-45d3-b397-fc04fe5fc734)
 # Printf Simplified
 
 A lightweight implementation of the `printf` function in C, adding simplicity and style to your projects.
