@@ -36,16 +36,17 @@ int p_char(va_list args)
 	_putchar(c);
 	return (1);
 }
-/**
- * p_integer - prints integer
+
+/*
+*p_integer - prints integer
  * @args: argument to print
  * Return: length
  */
 int p_integer(va_list args)
 {
 	int d = 1,
-	length = 0, 
-	num = va_arg(args, int);
+		length = 0,
+		num = va_arg(args, int);
 	unsigned int temp;
 
 	temp = num;
