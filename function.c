@@ -37,8 +37,8 @@ int p_char(va_list args)
 	return (1);
 }
 
-/*
-*p_integer - prints integer
+/**
+ * p_integer -prints integer
  * @args: argument to print
  * Return: length
  */
